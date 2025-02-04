@@ -12,7 +12,7 @@ function NewTaskForm({ onTaskFormSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onTaskFormSubmit(taskText, taskCategory);
+    onTaskFormSubmit({text: taskText, category: taskCategory});
     setTaskText("");
     setTaskCategory(CATEGORIES[0]);
   };

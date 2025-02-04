@@ -19,8 +19,7 @@ function App() {
     setSelectedCategory(category);
   };
 
-  const handleTaskFormSubmit = (taskText, taskCategory) => {
-    const newTask = { text: taskText, category: taskCategory };
+  const handleTaskFormSubmit = (newTask) => {
     setTasks([...tasks, newTask]);
   };
 

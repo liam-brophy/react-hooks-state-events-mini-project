@@ -4,7 +4,7 @@ import Task from "./Task"
 function TaskList({ tasks, removeTask, selectedCategory }) {
   const filteredTasks = tasks.filter(
     (task) =>
-      selectedCategory === "All" || task.category === selectedCategory
+      !selectedCategory || selectedCategory === "All" || task.category === selectedCategory
   );
 
   const mappedTasks = filteredTasks.map((task, index) => (
